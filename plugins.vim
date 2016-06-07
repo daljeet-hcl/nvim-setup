@@ -8,17 +8,22 @@ function! BuildYCM(info)
   endif
 endfunction
 
-"   " On-demand loading
+"  nerdTree
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
+
 " for intellisense
-Plug 'valloric/YouCompleteMe'
+" Plug 'valloric/YouCompleteMe'
+
 " for commenting code 
 Plug 'scrooloose/nerdcommenter'
 
 " for syntax jshint integration
 Plug 'scrooloose/syntastic'
-	
+
+" Tag bar for browsing program file structure
+Plug 'majutsushi/tagbar'
+
 Plug 'craigemery/vim-autotag'
 Plug 'Keithbsmiley/tmux.vim'
 Plug 'Lokaltog/vim-distinguished'
@@ -29,14 +34,19 @@ Plug 'Olical/vim-impl'
 Plug 'PeterRincker/vim-argumentative'
 Plug 'Raimondi/delimitMate'
 Plug 'SevereOverfl0w/async-clj-omni'
-Plug 'Shougo/deoplete.nvim'
+
+
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
 Plug 'SirVer/ultisnips'
 Plug 'adimit/prolog.vim'
 Plug 'aklt/plantuml-syntax'
 Plug 'andreimaxim/vim-io'
-Plug 'benekastah/neomake', { 'on': 'Neomake' }
+"Plug 'benekastah/neomake', { 'on': 'Neomake' }
 Plug 'cespare/vim-toml'
 Plug 'ctrlpvim/ctrlp.vim' | Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'dag/vim-fish'

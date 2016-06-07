@@ -23,4 +23,6 @@ vnoremap <C-c> "+y
 vnoremap <C-v> "+p
 
 " check javascript lint syntax check on file open
-" let g:syntastic_check_on_open=1
+let g:syntastic_check_on_open=1
+let g:deoplete#enable_at_startup = 1
+
