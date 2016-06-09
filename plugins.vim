@@ -23,6 +23,8 @@ Plug 'scrooloose/syntastic'
 
 " Tag bar for browsing program file structure
 Plug 'majutsushi/tagbar'
+" Test suite runner for nvim
+Plug 'janko-m/vim-test'
 
 Plug 'craigemery/vim-autotag'
 Plug 'Keithbsmiley/tmux.vim'
@@ -46,7 +48,8 @@ Plug 'SirVer/ultisnips'
 Plug 'adimit/prolog.vim'
 Plug 'aklt/plantuml-syntax'
 Plug 'andreimaxim/vim-io'
-"Plug 'benekastah/neomake', { 'on': 'Neomake' }
+" for jscs
+Plug 'benekastah/neomake', { 'on': 'Neomake' }
 Plug 'cespare/vim-toml'
 Plug 'ctrlpvim/ctrlp.vim' | Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'dag/vim-fish'
