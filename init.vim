@@ -22,6 +22,8 @@ endif
 vnoremap <C-c> "+y
 vnoremap <C-v> "+p
 
+"adding syntastic checkers
+let g:syntastic_javascript_checkers = ['jshint', 'jscs']
 " check javascript lint syntax check on file open
 let g:syntastic_check_on_open=1
 let g:deoplete#enable_at_startup = 1
